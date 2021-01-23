@@ -29,7 +29,9 @@ namespace Bird_Brain
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -42,7 +44,6 @@ namespace Bird_Brain
             this.label1.TabIndex = 0;
             this.label1.Text = "press a key";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
@@ -54,7 +55,6 @@ namespace Bird_Brain
             this.Name = "Form1";
             this.ShowInTaskbar = false;
             this.Text = "Bird Brain";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -64,6 +64,7 @@ namespace Bird_Brain
         #endregion
 
         public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Timer timer1;
     }
 }
 

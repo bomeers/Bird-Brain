@@ -1,63 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace Bird_Brain
 {
     public partial class Form1 : Form
     {
-        private KeyHandler _keyHandler;
-        private List<Keys> keys = new List<Keys>() { Keys.W, Keys.A, Keys.S, Keys.D };
+        #region Dll Imports
+        [DllImport("user32.dll")]
+        public static extern bool GetAsyncKeyState(Keys key);
+        #endregion
+
+        private List<Keys> keys = new List<Keys>() { };
 
         public Form1()
         {
             InitializeComponent();
-            //foreach (var key in keys) (_keyHandler = new KeyHandler(key, this)).Register();
+            StartTimer(timer1_Tick);
         }
 
         #region Form Editor
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private async void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            label1.Text = e.KeyCode.ToString();
+            // This will be used later on
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (GetAsyncKeyState(Keys.W) == true) label1.Text = Keys.W + " special";
+            else if (GetAsyncKeyState(Keys.A) == true) label1.Text = Keys.A + " special";
+            else if (GetAsyncKeyState(Keys.S) == true) label1.Text = Keys.S + " special";
+            else if (GetAsyncKeyState(Keys.D) == true) label1.Text = Keys.D + " special";
+
+            else label1.Text = "Nothing Pressed";
         }
         #endregion
 
-        
-        // Key Logger =======================
-
-        private void HandleHotkey(Keys key)
+        private void StartTimer(EventHandler eventHandler)
         {
-            label1.Text = key.ToString() + " done";
-        }
-
-        protected override void WndProc(ref Message m)
-        {
-            //if (m.Msg == Constants.WM_HOTKEY_MSG_ID)
-            //    HandleHotkey((Keys)(((int)m.LParam >> 16) & 0xFFFF));
-
-            KeyState keyState = new KeyState();
-            if (keyState.GetKeyState(Keys.W) == 1) HandleHotkey(Keys.W);
-
-            base.WndProc(ref m);
+            timer1.Tick += new EventHandler(eventHandler);
+            timer1.Interval = 16;
+            timer1.Start();
         }
     }
 }

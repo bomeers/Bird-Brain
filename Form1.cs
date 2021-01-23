@@ -21,7 +21,7 @@ namespace Bird_Brain
         public Form1()
         {
             InitializeComponent();
-            foreach (var key in keys) (_keyHandler = new KeyHandler(key, this)).Register();
+            //foreach (var key in keys) (_keyHandler = new KeyHandler(key, this)).Register();
         }
 
         #region Form Editor
@@ -30,9 +30,9 @@ namespace Bird_Brain
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -41,17 +41,22 @@ namespace Bird_Brain
         }
         #endregion
 
-
+        
         // Key Logger =======================
 
-        private void HandleHotkey(string keyPress)
+        private void HandleHotkey(Keys key)
         {
-            label1.Text = keyPress + " pressed | " + "w".GetHashCode() + " " + "W".GetHashCode();
+            label1.Text = key.ToString() + " done";
         }
+
         protected override void WndProc(ref Message m)
         {
-            if (m.Msg == Constants.WM_HOTKEY_MSG_ID)
-                HandleHotkey((m.LParam.ToInt32() + " | " + m.WParam.ToInt32()).ToString());
+            //if (m.Msg == Constants.WM_HOTKEY_MSG_ID)
+            //    HandleHotkey((Keys)(((int)m.LParam >> 16) & 0xFFFF));
+
+            KeyState keyState = new KeyState();
+            if (keyState.GetKeyState(Keys.W) == 1) HandleHotkey(Keys.W);
+
             base.WndProc(ref m);
         }
     }

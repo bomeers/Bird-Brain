@@ -1,0 +1,21 @@
+{
+  "name": "Bird-Brain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nw src/",
+    "prod": "nwbuild --platforms win64 --buildDir dist/ src/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nw": "^0.51.0-sdk",
+    "nw-builder": "^3.5.7"
+  },
+  "dependencies": {
+    "gkm": "^0.2.0",
+    "iohook": "^0.7.2"
+  }
+}

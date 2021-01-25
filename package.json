@@ -15,7 +15,6 @@
     "nw-builder": "^3.5.7"
   },
   "dependencies": {
-    "gkm": "^0.2.0",
-    "iohook": "^0.7.2"
+    "gkm": "^0.2.0"
   }
 }

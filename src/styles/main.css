@@ -1,4 +1,10 @@
 html body {
     overflow: hidden;
-    margin: 0;
+    margin: 100px;
+    background-color: #eaeaec;
+}
+
+#character {
+    position: relative;
+    top: 0px;
 }

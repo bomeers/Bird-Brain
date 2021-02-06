@@ -1,8 +1,9 @@
-var gui = require('nw.gui');
-var gkm = require('gkm');
-var pjson = require('../package.json');
-var AudioStreamMeter = require('audio-stream-meter');
-var character = document.getElementById("character");
+const gui = require('nw.gui');
+const gkm = require('gkm');
+const pjson = require('../package.json');
+const AudioStreamMeter = require('audio-stream-meter');
+const character = document.getElementById("character");
+var exportable = require("./twitchAuth.js");
 
 
 // Set window to always on top (This helps with some games)
@@ -22,20 +23,23 @@ navigator.mediaDevices.getUserMedia({audio:true})
         volume.style.width = meter.volume * 100 + '%';
         volume.innerText = meter.volume.toString();
 
-        if (meter.volume >= 0.2) {
+        if (meter.volume >= 0.3) {
+          character.src = "../images/pigeon5.png";
+        }
+        else if (meter.volume >= 0.15) {
           character.src = "../images/pigeon4.png";
         }
-        else if (meter.volume >= 0.1) {
+        else if (meter.volume >= 0.07) {
           character.src = "../images/pigeon3.png";
         }
-        else if (meter.volume >= 0.05) {
+        else if (meter.volume >= 0.02) {
           character.src = "../images/pigeon2.png";
         }
         else {
           character.src = "../images/pigeon1.png";
         }
     }, audioConfig);
-      
+    
     mediaStream.connect(meter);
     stream.onended = meter.close.bind(meter);
 });
@@ -54,6 +58,7 @@ gkm.events.on('key.*', function (data) {
     character.style.top = (top - 20).toString() + "px";
     character.style.left = left.toString() + "px";
     character.style.height = "250px";
+    doSomething.doSomething();
   }
   else if (this.event + data == "key.releasedW") {
     top = top + 20;

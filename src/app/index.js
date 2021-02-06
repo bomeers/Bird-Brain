@@ -5,6 +5,8 @@ const AudioStreamMeter = require('audio-stream-meter');
 const character = document.getElementById("character");
 var exportable = require("./twitchAuth.js");
 
+//Tesing twitch auth file
+exportable.doSomething();
 
 // Set window to always on top (This helps with some games)
 gui.Window.get().setAlwaysOnTop(true);

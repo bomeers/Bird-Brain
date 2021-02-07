@@ -1,10 +1,22 @@
 html body {
-    overflow: hidden;
+    background-color: #00FF37;
     margin: 100px;
-    background-color: #00ff37;
+    overflow: hidden;
 }
 
-#character {
+.character {
     position: relative;
     top: 0px;
+    max-height: 200px;
+}
+
+.volume-container {
+    width: 300px;
+    height: 30px;
+    background-color: #F0F;
+}
+
+.volume {
+    height: 30px;
+    background-color: #0FF;
 }

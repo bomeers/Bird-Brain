@@ -1,5 +1,7 @@
-function doSomething() {
-    document.getElementById("volume").style.backgroundColor = "#FFF";
+function doSomething (window) {
+  window.document.getElementById('volume').style.backgroundColor = '#FFF';
 }
 
-module.exports(doSomething);
+module.exports = {
+  doSomething
+};

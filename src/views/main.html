@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title id="app-title">Bird Brain</title>
-  <link rel="stylesheet" href="../styles/main.css">
-</head>
-
-<body>
-  <br><br>
-  <img id="character" src="../images/pigeon1.png" height="200px;" />
-  <div style="width:300px;height:30px;background-color:#FF00FF">
-    <div id="volume" style="height:30px;background-color:#00FFFF"></div>
-  </div>
-  <div id="vol-num"></div>
-</body>
-<script src="../app/index.js"></script>
-
+  <head>
+    <title id="app-title">Bird Brain</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <script defer src="../app/index.js"></script>
+  </head>
+  <body>
+    <div id="app-title"></div>
+    <img id="character" class="character" src="../images/pigeon1.png" />
+    <div class="volume-container">
+      <div id="volume" class="volume"></div>
+    </div>
+    <div id="vol-num"></div>
+  </body>
 </html>

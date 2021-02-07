@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run dev",
     "dev": "nw src/",
     "prod": "nwbuild --platforms win64 --buildDir dist/ src/"
   },
@@ -11,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nw": "^0.51.0-sdk",
+    "nw": "0.51.0-sdk",
     "nw-builder": "^3.5.7"
   },
   "dependencies": {

@@ -7,16 +7,16 @@ html body {
 .character {
     position: relative;
     top: 0px;
-    max-height: 200px;
+    height: 200px;
 }
 
 .volume-container {
     width: 300px;
     height: 30px;
-    background-color: #F0F;
+    background-color: rgb(95, 95, 95);
 }
 
 .volume {
     height: 30px;
-    background-color: #0FF;
+    background-color: #FFF;
 }

@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "nw src/",
-    "prod": "nwbuild --platforms win64 --buildDir dist/ src/"
+    "start": "nw src/",
+    "build": "nwbuild --platforms win64 --buildDir dist/ src/"
   },
   "keywords": [],
   "author": "",

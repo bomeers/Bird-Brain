@@ -4,19 +4,46 @@ html body {
     overflow: hidden;
 }
 
-.character {
+#character {
     position: relative;
     top: 0px;
     height: 200px;
 }
 
-.volume-container {
+#volume-container {
     width: 300px;
     height: 30px;
     background-color: rgb(95, 95, 95);
 }
 
-.volume {
+#volume {
     height: 30px;
     background-color: #FFF;
+}
+
+.test-eyes {
+    position: relative;
+    z-index: 1;
+    transform: translate(166px, 96px);
+    width: 30px;
+    height: 30px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-radius: 50%;
+    background-color: #FFF;
+}
+
+.pupil {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+#eye2 {
+    z-index: -1 !important;
+    transform: translate(232px, 58px) !important;
 }

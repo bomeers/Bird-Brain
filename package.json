@@ -11,8 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nw": "0.51.0-sdk",
-    "nw-builder": "^3.5.7"
+    "nw": "0.51.0-sdk"
   },
   "dependencies": {
     "audio-stream-meter": "^1.0.5",

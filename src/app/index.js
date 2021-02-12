@@ -1,4 +1,5 @@
 const gkm = require('gkm');
+const googleTTS = require('google-tts-api');
 const AudioStreamMeter = require('audio-stream-meter');
 const keyLogic = require('../app/keyLogic.js');
 const mouseLogic = require('../app/mouseLogic.js');
@@ -40,9 +41,7 @@ try {
     stream.onended = meter.close.bind(meter);
   });
 }
-catch (error) {
-  console.error(error);
-}
+catch (error) { console.error(error); }
 
 // === WASD | Mouse Logic ===
 try {
@@ -55,11 +54,16 @@ try {
     keyLogic.keyPress(this.event, data, character, eyes);
   });
 }
-catch (error) {
-  console.error(error);
-}
+catch (error) { console.error(error); }
 
 // === Text To Speech Logic ===
 win.on('focus', function () {
   console.log('This window is focused');
 });
+
+const url = googleTTS.getAudioUrl('Testing google tts', {
+  lang: 'en-US',
+  slow: false,
+  host: 'https://translate.google.com',
+});
+console.log(url);

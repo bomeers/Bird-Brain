@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nw src/",
+    "gkm-update": "update-gkm.bat",
     "build": "nwbuild --platforms win64 --buildDir dist/ src/"
   },
   "keywords": [],
@@ -15,6 +16,7 @@
   },
   "dependencies": {
     "audio-stream-meter": "^1.0.5",
-    "gkm": "^0.2.0"
+    "gkm": "^0.2.0",
+    "google-tts-api": "^2.0.1"
   }
 }

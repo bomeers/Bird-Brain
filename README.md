@@ -46,6 +46,6 @@ npm start
 * Add animated images instead of still image
 * [Speech bubble TTS when typing with window in focus](https://www.npmjs.com/package/google-tts-api)
 * [React to mouse capture](https://www.npmjs.com/package/gkm)
-* Faster you type, the more the bird sweats
+* Faster you type, the more the bird sweats (sprite sheet)
 * Find a way to build application into .exe format ("nw-builder": "^3.5.7" no longer works with node v15)
-* move to [iohook](https://www.npmjs.com/package/iohook) to replace gkm
+* find keyboard/mouse hook to replace gmk (removes need for JDK)

@@ -1,11 +1,11 @@
 {
   "name": "bird-brain",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "main": "views/main.html",
   "window": {
     "title": "Bird Brain",
     "icon": "assets/icon.png",
-    "width": 500,
+    "width": 600,
     "height": 500,
     "min_width": 100,
     "min_height": 100,

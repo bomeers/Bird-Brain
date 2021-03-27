@@ -1,13 +1,26 @@
 html body {
     background-color: #00FF37;
-    margin: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
     overflow: hidden;
 }
 
 #character {
     position: relative;
     top: 0px;
-    height: 200px;
+    height: 255px;
+    transform: translate(0px, -55px);
+}
+
+#megaphone {
+    position: absolute;
+    height: 250px;
+    transform: translate(-50px, -50px);
+    display: none;
+}
+
+.btn {
+    display: inline-block;
 }
 
 #volume-container {

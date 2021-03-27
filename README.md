@@ -1,9 +1,23 @@
-# Bird Brain
+<br />
+<p align="center">
+  <a href="https://github.com/bomeers/Bird-Brain">
+    <div align="center" style="font-size: 30px">🧠</div>
+  </a>
 
+  <h2 align="center">Bird Brain</h2>
 
-### A small NW.js desktop app used to animate illustrated images.
-
+  <p align="center">
+    Free, open, node.js application to move images
+    <br />
+    <a href="https://github.com/bomeers/Bird-Brain/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/bomeers/Bird-Brain/issues">Request Feature</a>
+  </p>
+</p>
 <br>
+
+---
+## Startup 
 
 ***Note:** if you are running jdk v15 or later, this application may not work on startup. Follow the steps in "JDK v15 Workaround" section*
 
@@ -16,13 +30,13 @@ npm start
 
 ---
 
-### Requirements
+## Requirements
 
 - [Oracle JDK](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html)
 
 ---
 
-### JDK v15 Workaround
+## JDK v15 Workaround
 
 *if you are using Oracle JDK v15 or later, run this script:*
 ```
@@ -31,7 +45,7 @@ npm run gkm-update
 
 ---
 
-### Future Goals
+## Todo
 
 * [Add twitch events](https://dev.twitch.tv/docs/eventsub)
 * Add animated images instead of still image
